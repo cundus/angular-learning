@@ -9,6 +9,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./table-list.component.css'],
 })
 export class TableListComponent implements OnInit {
+  displayedColumns: string[] = ['no', 'name', 'email', 'phone', 'createdAt'];
   listData: IData[] = [];
 
   constructor(private dataService: DataService) {}
