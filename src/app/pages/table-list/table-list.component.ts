@@ -19,6 +19,8 @@ export class TableListComponent implements OnInit {
   }
 
   getDatas(): void {
-    this.listData = this.dataService.getDatas();
+    this.dataService.getDatas().subscribe((data) => {
+      this.listData = data;
+    });
   }
 }
