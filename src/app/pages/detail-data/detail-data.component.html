@@ -1,1 +1,29 @@
-<p>detail-data works!</p>
+<div class="detail-container">
+  <div class="detail-header-container">
+    <h1>Detail Data</h1>
+    <button
+      mat-raised-button
+      color="primary"
+      style="height: 50px; width: 100px"
+      routerLink="/"
+    >
+      Back
+    </button>
+  </div>
+  <div class="">
+    <p>Name : {{ data.name }}</p>
+    <p>Email : {{ data.email }}</p>
+    <p>Phone : {{ data.phone }}</p>
+    <p>createdAt: {{ data.createdAt }}</p>
+  </div>
+  <div class="">
+    <button
+      mat-raised-button
+      color="primary"
+      routerLink="/edit-data/{{ data.id }}"
+    >
+      Edit
+    </button>
+    <button mat-raised-button color="warn" (click)="onDelete()">delete</button>
+  </div>
+</div>
