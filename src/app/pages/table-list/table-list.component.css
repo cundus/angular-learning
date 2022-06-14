@@ -1,3 +1,11 @@
 table {
   width: 100%;
 }
+
+.table-list-container {
+  margin: 1em;
+}
+
+.rounded-5 {
+  border-radius: 10px;
+}
