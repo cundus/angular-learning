@@ -1,1 +1,51 @@
-<p>edit-data works!</p>
+<div
+  class=""
+  style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  "
+>
+  <h1>Update Data</h1>
+  <button
+    mat-raised-button
+    color="primary"
+    style="height: 50px; width: 100px"
+    routerLink="/"
+  >
+    Back
+  </button>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="standard">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      placeholder="input your name"
+      [formControl]="name"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Enter your email</mat-label>
+    <input
+      matInput
+      placeholder="pat@example.com"
+      [formControl]="email"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field appearance="standard">
+    <mat-label>Phone</mat-label>
+    <input
+      matInput
+      placeholder="input your phone number"
+      [formControl]="phone"
+      required
+    />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
